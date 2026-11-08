@@ -422,22 +422,22 @@ export const AuthScreen: React.FC = () => {
             <Text style={styles.modalSectionLabel}>PRESETS:</Text>
             <View style={styles.presetRow}>
               <TouchableOpacity
+                style={[styles.presetButton, { borderColor: COLORS.flameBright, backgroundColor: 'rgba(255, 87, 34, 0.15)' }]}
+                onPress={() => setCustomUrlInput('https://pushups-titan.onrender.com/api')}
+              >
+                <Text style={[styles.presetButtonText, { color: COLORS.flameBright, fontWeight: '800' }]}>☁️ Render</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
                 style={styles.presetButton}
                 onPress={() => setCustomUrlInput('http://127.0.0.1:5000/api')}
               >
-                <Text style={styles.presetButtonText}>USB (127.0.0.1)</Text>
+                <Text style={styles.presetButtonText}>USB (Local)</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 style={styles.presetButton}
                 onPress={() => setCustomUrlInput('http://10.0.2.2:5000/api')}
               >
-                <Text style={styles.presetButtonText}>AVD (10.0.2.2)</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.presetButton}
-                onPress={() => setCustomUrlInput('http://10.68.120.150:5000/api')}
-              >
-                <Text style={styles.presetButtonText}>Wi-Fi LAN (10.68.120.150)</Text>
+                <Text style={styles.presetButtonText}>AVD</Text>
               </TouchableOpacity>
             </View>
 

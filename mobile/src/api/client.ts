@@ -1,19 +1,23 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 
+// Production backend on Render
+export const PRODUCTION_API_URL = 'https://pushups-titan.onrender.com/api';
+
 // Candidate URLs in priority order:
-// 1. 127.0.0.1:5000 (works on both physical device with `adb reverse` & iOS)
-// 2. 10.68.120.150:5000 (Host PC Wi-Fi IP for physical device over local network)
-// 3. 10.0.2.2:5000 (Android Emulator loopback)
-// 4. localhost:5000 (standard localhost)
+// 1. Production Render Cloud API (HTTPS)
+// 2. 127.0.0.1:5000 (Local USB with adb reverse)
+// 3. 10.68.120.150:5000 (Local Wi-Fi)
+// 4. 10.0.2.2:5000 (Android Emulator loopback)
 export const CANDIDATE_URLS = [
+  PRODUCTION_API_URL,
   'http://127.0.0.1:5000/api',
   'http://10.68.120.150:5000/api',
   Platform.OS === 'android' ? 'http://10.0.2.2:5000/api' : 'http://localhost:5000/api',
   'http://localhost:5000/api',
 ];
 
-export const DEFAULT_API_URL = CANDIDATE_URLS[0];
+export const DEFAULT_API_URL = PRODUCTION_API_URL;
 
 const API_BASE_KEY = '@pushup_api_base_url';
 const TOKEN_KEY = '@pushup_auth_token';
@@ -77,11 +81,8 @@ export const autoDetectBaseUrl = async (): Promise<string> => {
     console.log(`[API Client] Connected to backend at: ${fastest}`);
     return fastest;
   } catch {
-    // If all fail, fallback to host Wi-Fi IP on Android or 127.0.0.1
-    const fallback = Platform.select({
-      android: 'http://10.68.120.150:5000/api',
-      default: 'http://127.0.0.1:5000/api',
-    });
+    // If all fail, fallback to Production Cloud API
+    const fallback = PRODUCTION_API_URL;
     cachedBaseUrl = fallback;
     return fallback;
   }

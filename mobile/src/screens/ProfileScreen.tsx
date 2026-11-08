@@ -277,9 +277,7 @@ export const ProfileScreen: React.FC = () => {
               <Text style={styles.saveServerBtnText}>Update Server URL</Text>
             </TouchableOpacity>
             <Text style={styles.serverHint}>
-              • Android Emulator: http://10.0.2.2:5000/api{'\n'}• Physical Device (Wi-Fi):
-              http://10.68.120.150:5000/api{'\n'}• Physical Device (USB):
-              http://127.0.0.1:5000/api
+              • Production Cloud: https://pushups-titan.onrender.com/api{'\n'}• Android Emulator: http://10.0.2.2:5000/api{'\n'}• USB Tethering: http://127.0.0.1:5000/api
             </Text>
           </View>
         )}
