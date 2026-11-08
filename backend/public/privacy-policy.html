@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Pushup Titan (GeekyKalpesh)</title>
+  <style>
+    :root {
+      --bg: #0A0D14;
+      --card-bg: #141824;
+      --border: #262D40;
+      --primary: #FF5722;
+      --text: #F1F5F9;
+      --text-muted: #94A3B8;
+      --accent: #00E5FF;
+      --green: #39D353;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255, 87, 34, 0.15);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255, 87, 34, 0.3);
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #FFF;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    p:last-child { margin-bottom: 0; }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+    li::before {
+      content: "•";
+      color: var(--primary);
+      font-size: 20px;
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+    strong {
+      color: var(--text);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact-box {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 12px;
+      border: 1px solid var(--border);
+    }
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">OFFICIAL PRIVACY POLICY</span>
+      <h1>Pushup Titan</h1>
+      <p class="subtitle">Effective Date: November 8, 2026 &bull; Published by GeekyKalpesh</p>
+    </header>
+
+    <div class="card">
+      <h2>1. Introduction & Overview</h2>
+      <p>This Privacy Policy describes how <strong>Pushup Titan</strong>, operated and authored by <strong>GeekyKalpesh</strong> ("we", "us", or "our"), collects, uses, and safeguards information when you use our mobile application and backend services.</p>
+      <p>We respect your privacy and are committed to protecting any personally identifiable information you provide through the app.</p>
+    </div>
+
+    <div class="card">
+      <h2>2. Information We Collect</h2>
+      <ul>
+        <li><strong>Account Information:</strong> When you register, we collect your email address, username, and encrypted password. If enabled, your 4-digit quick passcode is also salted and securely hashed using bcrypt.</li>
+        <li><strong>Fitness & Activity Data:</strong> Workout logs (pushup repetitions, timestamp, sets, notes, personal records) and daily progress goals.</li>
+        <li><strong>Nutritional Information:</strong> Egg consumption logs, calculated protein metrics, and daily nutrition targets.</li>
+        <li><strong>Device & Network Data:</strong> Standard connection headers and crash prevention telemetry strictly necessary for communicating with our API. We do <strong>NOT</strong> collect GPS locations or sensitive contacts.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3. How We Use Your Data</h2>
+      <ul>
+        <li>To power your personal daily analytics, habit streak calendars, and GitHub-style activity heatmaps.</li>
+        <li>To synchronize workout logs securely across your devices.</li>
+        <li>To notify you of scheduled reminders or workout alarms you configure.</li>
+        <li><strong>No Selling of Data:</strong> We never sell, lease, or monetize your data with third-party advertisers or data brokers.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. Data Security & Storage</h2>
+      <p>All network communications between the mobile application and our backend server are encrypted using industry-standard SSL/TLS protocols. User authentication utilizes JSON Web Tokens (JWT) and secure one-way salted bcrypt hashing. Database records are maintained on enterprise-grade PostgreSQL cloud infrastructure (Neon Cloud) protected by strict firewalls and security controls.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. User Rights & Data Deletion</h2>
+      <p>Under Google Play Store Developer Guidelines and applicable data protection regulations (GDPR / CCPA):</p>
+      <ul>
+        <li>You may view, edit, or delete individual workout and egg records directly inside the application at any time.</li>
+        <li><strong>Account Deletion:</strong> You have the right to request permanent deletion of your account and all associated fitness logs. To initiate account deletion, contact us at <a href="mailto:geekykalpesh@gmail.com">geekykalpesh@gmail.com</a> with the subject line <em>"Account Deletion Request"</em>. All records will be permanently purged within 30 days.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>6. Health & Medical Disclaimer</h2>
+      <p>Pushup Titan is an exercise log and habit tracker created for informational and motivation purposes only. It is not a medical device, nor does it provide clinical health advice. Consult a healthcare professional before initiating any intense exercise or nutrition regimen.</p>
+    </div>
+
+    <div class="card">
+      <h2>7. Developer Contact</h2>
+      <p>If you have questions, feedback, or data privacy requests regarding Pushup Titan, please reach out to us:</p>
+      <div class="contact-box">
+        <p><strong>Developer:</strong> GeekyKalpesh</p>
+        <p><strong>Email:</strong> <a href="mailto:geekykalpesh@gmail.com">geekykalpesh@gmail.com</a></p>
+        <p><strong>Package Name:</strong> com.geekykalpesh.pushups</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Pushup Titan by GeekyKalpesh. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
