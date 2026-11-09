@@ -34,6 +34,11 @@ app.get('/privacy-policy', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/privacy-policy.html'));
 });
 
+// Account Deletion Request page (Google Play Data Safety Requirement)
+app.get('/delete-account', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/delete-account.html'));
+});
+
 // Root & Healthcheck
 app.get('/', (req, res) => {
   res.json({
